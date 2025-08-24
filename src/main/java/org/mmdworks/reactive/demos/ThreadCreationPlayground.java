@@ -2,7 +2,7 @@ package org.mmdworks.reactive.demos;
 
 import java.util.concurrent.*;
 
-public class ThreadCreationDemos {
+public class ThreadCreationPlayground {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
 

@@ -1,0 +1,3 @@
+Q .“How would you handle calling a blocking DB in a reactive app?”
+
+A. “I'd wrap it with Mono.fromCallable() and shift it onto a boundedElastic scheduler to keep my reactive pipeline non-blocking.”

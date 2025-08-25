@@ -3,6 +3,10 @@ package org.mmdworks.reactive.demos;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class MapAndFlatMapPlayground {
 
     public static void main(String[] args) {
@@ -29,7 +33,13 @@ public class MapAndFlatMapPlayground {
 //        Mono<Invoice> invoiceMono = orderId.flatMap(e -> service.getInvoiceForOrder(e));
 
 
+        List<List<String>> listOfLists = List.of(
+                List.of("a", "b"),
+                List.of("c", "d")
+        );
 
+        List<String> list = listOfLists.stream().flatMap(e -> e.stream()).toList();
+        System.out.println(list);
 
     }
 }
